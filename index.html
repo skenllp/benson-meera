@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Benson &amp; Meera | Wedding Invitation</title>
+  <meta name="description"
+    content="Join us as we celebrate the Wedding of Benson &amp; Meera. December 28, 2026 – January 3, 2027 — a celebration of love, faith, and family.">
+  <link rel="canonical" href="https://benson-meera.vercel.app/">
+
+  <!-- Open Graph / WhatsApp / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benson-meera.vercel.app/">
+  <meta property="og:site_name" content="Benson &amp; Meera Wedding">
+  <meta property="og:title" content="Benson &amp; Meera — Wedding Invitation">
+  <meta property="og:description"
+    content="December 28, 2026 – January 3, 2027 · Together with our families, joyfully invite you to celebrate our Wedding.">
+  <meta property="og:image" content="https://benson-meera.vercel.app/og-image.jpg">
+  <meta property="og:image:secure_url" content="https://benson-meera.vercel.app/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Benson &amp; Meera Wedding Invitation">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://benson-meera.vercel.app/">
+  <meta name="twitter:title" content="Benson &amp; Meera — Wedding Invitation">
+  <meta name="twitter:description"
+    content="Join us as we celebrate the Wedding of Benson &amp; Meera, December 28, 2026 – January 3, 2027.">
+  <meta name="twitter:image" content="https://benson-meera.vercel.app/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Mrs+Saint+Delafield&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Background music -->
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Music toggle button -->
+  <button id="mute-btn" aria-label="Toggle background music" title="Toggle music">
+    <span class="music-pulse" aria-hidden="true"></span>
+    <svg id="icon-sound" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+    </svg>
+    <svg id="icon-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <line x1="23" y1="9" x2="17" y2="15"></line>
+      <line x1="17" y1="9" x2="23" y2="15"></line>
+    </svg>
+  </button>
+
+  <!-- SVG gradient defs -->
+  <svg width="0" height="0" style="position:absolute;" aria-hidden="true">
+    <defs>
+      <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#F5EDD8" />
+        <stop offset="45%" stop-color="#D4B882" />
+        <stop offset="75%" stop-color="#B89A6A" />
+        <stop offset="100%" stop-color="#8A7245" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ============================================================
+     COVER — OPENING ANIMATION
+============================================================ -->
+  <div id="cover" role="dialog" aria-label="Wedding invitation opening" aria-modal="true">
+
+    <!-- Left panel (Groom) -->
+    <div class="fold left">
+      <div class="cover-top">
+      </div>
+      <div class="cover-bottom">
+        <div class="cover-name">
+          <div class="n">Benson</div>
+          <div class="r">The Groom</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center seal -->
+    <div class="cover-center" id="tapToOpen" role="button" tabindex="0" aria-label="Tap to open the wedding invitation">
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:74px;height:74px;"
+          aria-hidden="true">
+          <defs>
+            <linearGradient id="sealGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#F5EDD8" />
+              <stop offset="50%" stop-color="#D4B882" />
+              <stop offset="100%" stop-color="#8A7245" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="44" stroke="url(#sealGold)" stroke-width="1.4" stroke-dasharray="3 3"
+            opacity="0.85" />
+          <text x="50" y="64" text-anchor="middle" font-family="'Mrs Saint Delafield', cursive" font-size="58"
+            fill="url(#sealGold)">BM</text>
+        </svg>
+      </div>
+      <div class="tap-label">Tap to open</div>
+    </div>
+
+    <!-- Right panel (Bride) -->
+    <div class="fold right">
+      <div class="cover-top" style="visibility:hidden" aria-hidden="true">
+        <div class="cover-cross-symbol">✝</div>
+        <p class="cover-verse">placeholder</p>
+      </div>
+      <div class="cover-bottom">
+        <div class="cover-name">
+          <div class="n">Meera</div>
+          <div class="r">The Bride</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+     MAIN CONTENT
+============================================================ -->
+  <main id="main">
+
+    <!-- ====== HERO ====== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <!-- Floating sparkle particles -->
+      <span class="hero-sparkle" style="--dur:7s;--del:0s;   left:15%; top:70%;"></span>
+      <span class="hero-sparkle" style="--dur:9s;--del:1.5s; left:80%; top:60%;"></span>
+      <span class="hero-sparkle" style="--dur:8s;--del:3s;   left:30%; top:80%;"></span>
+      <span class="hero-sparkle" style="--dur:10s;--del:0.8s;left:65%; top:75%;"></span>
+      <span class="hero-sparkle" style="--dur:6s;--del:2.2s; left:50%; top:85%;"></span>
+      <span class="hero-sparkle" style="--dur:11s;--del:4s;  left:22%; top:55%;"></span>
+
+      <div class="hero-content reveal">
+        <h1 class="hero-names" id="hero-heading">
+          Benson
+          <span class="amp-script">&amp;</span>
+          Meera
+        </h1>
+
+        <!-- Centerpiece Couple Portrait -->
+        <div class="hero-portrait-wrapper">
+          <div class="hero-portrait-inner">
+            <img src="couple-main.jpeg" alt="Benson &amp; Meera" class="hero-portrait-img" width="500" height="660">
+          </div>
+          <div class="hero-portrait-badge" aria-hidden="true">BM</div>
+        </div>
+
+        <p class="hero-tagline">
+          Together with our families, joyfully invite you<br>
+          to celebrate our wedding
+        </p>
+
+        <div class="divider light" aria-hidden="true">
+          <span class="line"></span>
+          <span class="gem"></span>
+          <span class="line"></span>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true">
+          <span>Scroll</span>
+          <div class="chev"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== WELCOME MESSAGE ====== -->
+    <section class="welcome" aria-labelledby="welcome-heading">
+      <div class="reveal">
+        <p class="eyebrow">With Joyful Hearts</p>
+        <div class="divider"><span class="line"></span><span class="gem"></span><span class="line"></span></div>
+        <h2 id="welcome-heading">You Are Warmly Invited</h2>
+      </div>
+      <div class="reveal" style="transition-delay: 0.15s; margin-top: 28px;">
+        <p class="welcome-body">
+          With grateful hearts, we — <em>Benson</em> and <em>Meera</em> —
+          together with our beloved families, joyfully invite you to share in the celebration of our
+          <strong>Engagement &amp; Mylanchi, Chanthamcharthal and Wedding</strong>.
+          <br><br>
+          Your presence, love, and prayers mean everything to us as we begin this beautiful journey together.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====== COUPLE SECTION ====== -->
+    <section class="couple-section" aria-labelledby="couple-heading">
+      <div class="reveal">
+        <p class="eyebrow">The Couple</p>
+        <div class="divider"><span class="line"></span><span class="gem"></span><span class="line"></span></div>
+        <h2 id="couple-heading">Two Hearts, One Love</h2>
+      </div>
+
+      <div class="couple-grid">
+        <div class="couple-card reveal left" style="transition-delay: 0.10s;">
+          <div class="role-tag">✦ The Groom ✦</div>
+          <div class="person-name">Benson</div>
+          <div class="person-surname">Philip</div>
+          <div class="divider rose" style="margin: 0 auto 18px;" aria-hidden="true">
+            <span class="line"></span><span class="gem"></span><span class="line"></span>
+          </div>
+          <div class="person-parents">
+            Beloved son of<br>
+            <em style="color:var(--accent);">Mr. Benny Puthiyaveettil &amp; Mrs. Minimol Puthiyaveettil</em>
+            <div class="person-house">( Puthiyaveettil )</div>
+          </div>
+        </div>
+
+        <div class="couple-and-separator reveal" style="transition-delay: 0.20s;" aria-hidden="true">&amp;</div>
+
+        <div class="couple-card reveal right" style="transition-delay: 0.30s;">
+          <div class="role-tag">✦ The Bride ✦</div>
+          <div class="person-name">Meera Rose</div>
+          <div class="person-surname">Jojo</div>
+          <div class="divider rose" style="margin: 0 auto 18px;" aria-hidden="true">
+            <span class="line"></span><span class="gem"></span><span class="line"></span>
+          </div>
+          <div class="person-parents">
+            Beloved daughter of<br>
+            <em style="color:var(--accent);">Mr. Jojo Kadavil &amp; Mrs. Tipsy Kadavil</em>
+            <div class="person-house">( Kadavil )</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CHERISHED MOMENTS GALLERY ====== -->
+    <section class="gallery-section" aria-labelledby="gallery-heading">
+      <div class="reveal">
+        <p class="eyebrow">A Glimpse of Our Journey</p>
+        <div class="divider" aria-hidden="true">
+          <span class="line"></span><span class="gem"></span><span class="line"></span>
+        </div>
+        <h2 id="gallery-heading">Moments of Love</h2>
+        <p class="gallery-subtitle">
+          Two hearts, one beautiful story written in love, laughter, and faith.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Feature 1: Traditional Full Portrait -->
+        <div class="gallery-item col-6 reveal left" style="transition-delay: 0.10s;">
+          <div class="gallery-item-inner">
+            <img src="couple1.jpeg" alt="Benson &amp; Meera in traditional Kerala wedding attire" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Feature 2: Sunset Embrace -->
+        <div class="gallery-item col-6 reveal right" style="transition-delay: 0.15s;">
+          <div class="gallery-item-inner">
+            <img src="couple-main.jpeg" alt="Benson &amp; Meera golden hour sunset portrait" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Photo 3: Lift / Joy -->
+        <div class="gallery-item col-4 reveal left" style="transition-delay: 0.20s;">
+          <div class="gallery-item-inner">
+            <img src="couple2.jpeg" alt="Benson lifting Meera in joy" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Photo 4: Garland / Sacred Tradition -->
+        <div class="gallery-item col-4 reveal" style="transition-delay: 0.25s;">
+          <div class="gallery-item-inner">
+            <img src="couple3.jpeg" alt="Jasmine garland ritual moment" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Photo 5: Courtyard rain shower laughing -->
+        <div class="gallery-item col-4 reveal right" style="transition-delay: 0.30s;">
+          <div class="gallery-item-inner">
+            <img src="couple4.jpeg" alt="Benson &amp; Meera laughing in the courtyard" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== COUNTDOWN ====== -->
+    <section class="countdown" aria-labelledby="countdown-heading">
+      <div class="reveal">
+        <p class="eyebrow light">Counting Down</p>
+        <div class="divider light" aria-hidden="true">
+          <span class="line"></span><span class="gem"></span><span class="line"></span>
+        </div>
+        <h2 id="countdown-heading">Until We Say &ldquo;I Do&rdquo;</h2>
+      </div>
+      <div class="reveal" style="transition-delay: 0.15s;">
+        <div class="countdown-grid" id="countdown" aria-live="polite" aria-label="Countdown to wedding">
+          <div class="cbox">
+            <div class="cnum" id="cd-days">00</div>
+            <div class="clabel">Days</div>
+          </div>
+          <div class="cbox">
+            <div class="cnum" id="cd-hours">00</div>
+            <div class="clabel">Hours</div>
+          </div>
+          <div class="cbox">
+            <div class="cnum" id="cd-mins">00</div>
+            <div class="clabel">Minutes</div>
+          </div>
+          <div class="cbox">
+            <div class="cnum" id="cd-secs">00</div>
+            <div class="clabel">Seconds</div>
+          </div>
+        </div>
+        <p class="countdown-until">Until the Wedding — January 3, 2027</p>
+      </div>
+    </section>
+
+    <!-- ====== EVENTS ====== -->
+    <section class="events" aria-labelledby="events-heading">
+      <div class="reveal">
+        <p class="eyebrow">Sacred Celebrations</p>
+        <div class="divider" aria-hidden="true">
+          <span class="line"></span><span class="gem"></span><span class="line"></span>
+        </div>
+        <h2 id="events-heading">Our Events</h2>
+      </div>
+
+      <div class="event-cards">
+
+        <!-- Engagement & Mylanchi Card -->
+        <article class="event-card reveal left" style="transition-delay: 0.10s;">
+          <div class="event-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 10a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
+              <path d="M15 10a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
+              <path d="M12 6l-1.5-2.5h3L12 6z"/>
+            </svg>
+          </div>
+          <h3>Engagement &amp; Mylanchi</h3>
+          <div class="event-detail">
+            <span class="event-detail-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>
+            </span>
+            <div class="event-detail-text">
+              <div class="primary">December 28, 2026</div>
+              <div class="secondary">5:00 PM &mdash; Monday</div>
+            </div>
+          </div>
+          <div class="event-detail">
+            <span class="event-detail-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div class="event-detail-text">
+              <div class="primary">St. John Nepumcene's Church</div>
+              <div class="secondary">(Vallara Puthen Pally), Kumarakom</div>
+            </div>
+          </div>
+          <div class="event-reception-note">
+            <em>followed by reception at</em>
+            <strong>Kottayam Club, Kumarakom</strong>
+          </div>
+          <a class="event-btn" href="https://www.google.com/maps/search/?api=1&query=St.+John+Nepumcene+Knanaya+Catholic+Church+Kumarakom" target="_blank" rel="noopener noreferrer"
+            aria-label="View Engagement venue on Google Maps">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              View Location
+            </span>
+          </a>
+        </article>
+
+        <!-- Chanthamcharthal Card -->
+        <article class="event-card reveal" style="transition-delay: 0.15s;">
+          <div class="event-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <h3>Chanthamcharthal</h3>
+          <div class="event-detail">
+            <span class="event-detail-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>
+            </span>
+            <div class="event-detail-text">
+              <div class="primary">December 30, 2026</div>
+              <div class="secondary">6:00 PM &mdash; Wednesday</div>
+            </div>
+          </div>
+          <div class="event-detail">
+            <span class="event-detail-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div class="event-detail-text">
+              <div class="primary">Orchard River Mansion</div>
+              <div class="secondary">Homestay &amp; Convention Centre, Pala</div>
+            </div>
+          </div>
+          <a class="event-btn" href="https://www.google.com/maps/search/?api=1&query=Orchard+River+Mansion+Homestay+Convention+Centre+Pala" target="_blank" rel="noopener noreferrer"
+            aria-label="View Chanthamcharthal venue on Google Maps">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              View Location
+            </span>
+          </a>
+        </article>
+
+        <!-- Wedding Card -->
+        <article class="event-card reveal right" style="transition-delay: 0.20s;">
+          <div class="event-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v5M9.5 4.5h5"/>
+              <path d="M12 7L4 13v9h16v-9L12 7z"/>
+              <path d="M10 22v-6a2 2 0 0 1 4 0v6"/>
+            </svg>
+          </div>
+          <h3>Wedding</h3>
+          <div class="event-detail">
+            <span class="event-detail-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>
+            </span>
+            <div class="event-detail-text">
+              <div class="primary">January 3, 2027</div>
+              <div class="secondary">3:30 PM &mdash; Sunday</div>
+            </div>
+          </div>
+          <div class="event-detail">
+            <span class="event-detail-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div class="event-detail-text">
+              <div class="primary">St. Mary's Knanaya Catholic Church</div>
+              <div class="secondary">Forane Church, Kidangoor</div>
+            </div>
+          </div>
+          <div class="event-reception-note">
+            <em>followed by reception at</em>
+            <strong>Grand Arena, Pattithanam, Ettumanoor</strong>
+          </div>
+          <a class="event-btn" href="https://www.google.com/maps/search/?api=1&query=St.+Mary+Knanaya+Catholic+Forane+Church+Kidangoor" target="_blank"
+            rel="noopener noreferrer" aria-label="View Wedding location on Google Maps">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              View Location
+            </span>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====== TIMELINE ====== -->
+    <section class="timeline" aria-labelledby="timeline-heading">
+      <div class="reveal">
+        <p class="eyebrow">Our Journey</p>
+        <div class="divider" aria-hidden="true">
+          <span class="line"></span><span class="gem"></span><span class="line"></span>
+        </div>
+        <h2 id="timeline-heading">The Celebration</h2>
+      </div>
+
+      <ol class="timeline-list" aria-label="Wedding events timeline">
+        <li class="tl-item reveal left" style="transition-delay: 0.10s;">
+          <div class="tl-dot" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 10a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
+              <path d="M15 10a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
+              <path d="M12 6l-1.5-2.5h3L12 6z"/>
+            </svg>
+          </div>
+          <div class="tl-content">
+            <div class="tl-tag">Dec 28, 2026</div>
+            <div class="tl-title">Engagement &amp; Mylanchi</div>
+            <div class="tl-date">5:00 PM &middot; Kumarakom</div>
+          </div>
+        </li>
+        <li class="tl-item reveal right" style="transition-delay: 0.15s;">
+          <div class="tl-dot" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <div class="tl-content">
+            <div class="tl-tag">Dec 30, 2026</div>
+            <div class="tl-title">Chanthamcharthal</div>
+            <div class="tl-date">6:00 PM &middot; Pala</div>
+          </div>
+        </li>
+        <li class="tl-item reveal left" style="transition-delay: 0.20s;">
+          <div class="tl-dot" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M7 7h10"/>
+            </svg>
+          </div>
+          <div class="tl-content">
+            <div class="tl-tag">Jan 3, 2027</div>
+            <div class="tl-title">Wedding Ceremony</div>
+            <div class="tl-date">3:30 PM &middot; Kidangoor &amp; Ettumanoor</div>
+          </div>
+        </li>
+        <li class="tl-item reveal right" style="transition-delay: 0.25s;">
+          <div class="tl-dot" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <div class="tl-content">
+            <div class="tl-tag">Forever</div>
+            <div class="tl-title">A New Chapter Begins</div>
+            <div class="tl-date">Together, hand in hand</div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ====== VENUE ====== -->
+    <section class="venue" aria-labelledby="venue-heading">
+      <div class="reveal">
+        <p class="eyebrow">Where To Find Us</p>
+        <div class="divider" aria-hidden="true">
+          <span class="line"></span><span class="gem"></span><span class="line"></span>
+        </div>
+        <h2 id="venue-heading">Our Venues</h2>
+      </div>
+
+      <div class="venue-cards">
+
+        <!-- Engagement Venue -->
+        <article class="venue-card reveal left" style="transition-delay: 0.10s;">
+          <div class="venue-tag">✦ Engagement &amp; Mylanchi ✦</div>
+          <div class="venue-title">St. John Nepumcene's Church</div>
+          <div class="venue-datetime">December 28, 2026 &middot; 5:00 PM</div>
+          <div class="divider" aria-hidden="true" style="margin: 14px auto;">
+            <span class="line"></span><span class="gem"></span><span class="line"></span>
+          </div>
+          <a class="venue-map-link" href="https://www.google.com/maps/search/?api=1&query=St.+John+Nepumcene+Knanaya+Catholic+Church+Kumarakom" target="_blank"
+            rel="noopener noreferrer" aria-label="Open Engagement venue on Google Maps">
+            <div class="venue-map-placeholder">
+              <span class="map-icon" aria-hidden="true">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+                  <line x1="8" y1="2" x2="8" y2="18"/>
+                  <line x1="16" y1="6" x2="16" y2="22"/>
+                  <circle cx="12" cy="11" r="2" fill="currentColor"/>
+                </svg>
+              </span>
+              <span>Kumarakom &middot; Reception at Kottayam Club</span>
+            </div>
+          </a>
+          <a class="venue-btn" href="https://www.google.com/maps/search/?api=1&query=St.+John+Nepumcene+Knanaya+Catholic+Church+Kumarakom" target="_blank" rel="noopener noreferrer"
+            aria-label="Open Engagement venue directions in Google Maps">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Open Google Maps
+            </span>
+          </a>
+        </article>
+
+        <!-- Chanthamcharthal Venue -->
+        <article class="venue-card reveal" style="transition-delay: 0.15s;">
+          <div class="venue-tag">✦ Chanthamcharthal Venue ✦</div>
+          <div class="venue-title">Orchard River Mansion</div>
+          <div class="venue-datetime">December 30, 2026 &middot; 6:00 PM</div>
+          <div class="divider" aria-hidden="true" style="margin: 14px auto;">
+            <span class="line"></span><span class="gem"></span><span class="line"></span>
+          </div>
+          <a class="venue-map-link" href="https://www.google.com/maps/search/?api=1&query=Orchard+River+Mansion+Homestay+Convention+Centre+Pala" target="_blank"
+            rel="noopener noreferrer" aria-label="Open Chanthamcharthal venue on Google Maps">
+            <div class="venue-map-placeholder">
+              <span class="map-icon" aria-hidden="true">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+                  <line x1="8" y1="2" x2="8" y2="18"/>
+                  <line x1="16" y1="6" x2="16" y2="22"/>
+                  <circle cx="12" cy="11" r="2" fill="currentColor"/>
+                </svg>
+              </span>
+              <span>Homestay &amp; Convention Centre, Pala</span>
+            </div>
+          </a>
+          <a class="venue-btn" href="https://www.google.com/maps/search/?api=1&query=Orchard+River+Mansion+Homestay+Convention+Centre+Pala" target="_blank" rel="noopener noreferrer"
+            aria-label="Open Chanthamcharthal venue directions in Google Maps">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Open Google Maps
+            </span>
+          </a>
+        </article>
+
+        <!-- Wedding Venue -->
+        <article class="venue-card reveal right" style="transition-delay: 0.20s;">
+          <div class="venue-tag">✦ Wedding &amp; Reception ✦</div>
+          <div class="venue-title">St. Mary's Forane Church</div>
+          <div class="venue-datetime">January 3, 2027 &middot; 3:30 PM</div>
+          <div class="divider" aria-hidden="true" style="margin: 14px auto;">
+            <span class="line"></span><span class="gem"></span><span class="line"></span>
+          </div>
+          <a class="venue-map-link" href="https://www.google.com/maps/search/?api=1&query=St.+Mary+Knanaya+Catholic+Forane+Church+Kidangoor" target="_blank"
+            rel="noopener noreferrer" aria-label="Open Wedding venue on Google Maps">
+            <div class="venue-map-placeholder">
+              <span class="map-icon" aria-hidden="true">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+                  <line x1="8" y1="2" x2="8" y2="18"/>
+                  <line x1="16" y1="6" x2="16" y2="22"/>
+                  <circle cx="12" cy="11" r="2" fill="currentColor"/>
+                </svg>
+              </span>
+              <span>Kidangoor &middot; Reception at Grand Arena, Pattithanam, Ettumanoor</span>
+            </div>
+          </a>
+          <a class="venue-btn" href="https://www.google.com/maps/search/?api=1&query=St.+Mary+Knanaya+Catholic+Forane+Church+Kidangoor" target="_blank"
+            rel="noopener noreferrer" aria-label="Open Wedding venue directions in Google Maps">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Open Google Maps
+            </span>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====== BIBLE VERSE ====== -->
+    <section class="quote-section" aria-labelledby="quote-heading">
+      <div class="reveal">
+        <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote>
+          <p class="quote-text" id="quote-heading">
+            Two are better than one, because they have a good reward for their toil.
+            For if they fall, one will lift up his fellow.
+          </p>
+          <footer style="margin-top: 26px;">
+            <cite class="quote-ref">Ecclesiastes 4:9&ndash;10</cite>
+          </footer>
+        </blockquote>
+        <div class="divider light" aria-hidden="true" style="margin-top: 38px;">
+          <span class="line"></span><span class="gem"></span><span class="line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FLORAL SEPARATOR ====== -->
+    <section class="floral-separator" aria-hidden="true">
+      <div class="floral-ornament">
+        <span class="orn-line"></span>
+        <div class="orn-center">
+          <span class="orn-gem"></span>
+          <span class="orn-flower">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 2a4 4 0 0 0-4 4c0 2.5 4 5 4 5s4-2.5 4-5a4 4 0 0 0-4-4z"/>
+              <path d="M12 22a4 4 0 0 0 4-4c0-2.5-4-5-4-5s-4 2.5-4 5a4 4 0 0 0 4 4z"/>
+              <path d="M2 12a4 4 0 0 0 4 4c2.5 0 5-4 5-4s-2.5-4-5-4a4 4 0 0 0-4 4z"/>
+              <path d="M22 12a4 4 0 0 0-4-4c-2.5 0-5 4-5 4s2.5 4 5 4a4 4 0 0 0 4 4z"/>
+            </svg>
+          </span>
+          <span class="orn-gem"></span>
+          <span class="orn-flower">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 2a4 4 0 0 0-4 4c0 2.5 4 5 4 5s4-2.5 4-5a4 4 0 0 0-4-4z"/>
+              <path d="M12 22a4 4 0 0 0 4-4c0-2.5-4-5-4-5s-4 2.5-4 5a4 4 0 0 0 4 4z"/>
+              <path d="M2 12a4 4 0 0 0 4 4c2.5 0 5-4 5-4s-2.5-4-5-4a4 4 0 0 0-4 4z"/>
+              <path d="M22 12a4 4 0 0 0-4-4c-2.5 0-5 4-5 4s2.5 4 5 4a4 4 0 0 0 4 4z"/>
+            </svg>
+          </span>
+          <span class="orn-gem"></span>
+          <span class="orn-flower">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 2a4 4 0 0 0-4 4c0 2.5 4 5 4 5s4-2.5 4-5a4 4 0 0 0-4-4z"/>
+              <path d="M12 22a4 4 0 0 0 4-4c0-2.5-4-5-4-5s-4 2.5-4 5a4 4 0 0 0 4 4z"/>
+              <path d="M2 12a4 4 0 0 0 4 4c2.5 0 5-4 5-4s-2.5-4-5-4a4 4 0 0 0-4 4z"/>
+              <path d="M22 12a4 4 0 0 0-4-4c-2.5 0-5 4-5 4s2.5 4 5 4a4 4 0 0 0 4 4z"/>
+            </svg>
+          </span>
+          <span class="orn-gem"></span>
+        </div>
+        <span class="orn-line"></span>
+      </div>
+      <div class="floral-text reveal">Benson &amp; Meera</div>
+      <div class="floral-ornament" style="margin-top: 28px;">
+        <span class="orn-line"></span>
+        <div class="orn-center">
+          <span class="orn-gem"></span>
+          <span class="orn-flower">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 2a4 4 0 0 0-4 4c0 2.5 4 5 4 5s4-2.5 4-5a4 4 0 0 0-4-4z"/>
+              <path d="M12 22a4 4 0 0 0 4-4c0-2.5-4-5-4-5s-4 2.5-4 5a4 4 0 0 0 4 4z"/>
+              <path d="M2 12a4 4 0 0 0 4 4c2.5 0 5-4 5-4s-2.5-4-5-4a4 4 0 0 0-4 4z"/>
+              <path d="M22 12a4 4 0 0 0-4-4c-2.5 0-5 4-5 4s2.5 4 5 4a4 4 0 0 0 4 4z"/>
+            </svg>
+          </span>
+          <span class="orn-gem"></span>
+          <span class="orn-flower">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 2a4 4 0 0 0-4 4c0 2.5 4 5 4 5s4-2.5 4-5a4 4 0 0 0-4-4z"/>
+              <path d="M12 22a4 4 0 0 0 4-4c0-2.5-4-5-4-5s-4 2.5-4 5a4 4 0 0 0 4 4z"/>
+              <path d="M2 12a4 4 0 0 0 4 4c2.5 0 5-4 5-4s-2.5-4-5-4a4 4 0 0 0-4 4z"/>
+              <path d="M22 12a4 4 0 0 0-4-4c-2.5 0-5 4-5 4s2.5 4 5 4a4 4 0 0 0 4 4z"/>
+            </svg>
+          </span>
+          <span class="orn-gem"></span>
+          <span class="orn-flower">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 2a4 4 0 0 0-4 4c0 2.5 4 5 4 5s4-2.5 4-5a4 4 0 0 0-4-4z"/>
+              <path d="M12 22a4 4 0 0 0 4-4c0-2.5-4-5-4-5s-4 2.5-4 5a4 4 0 0 0 4 4z"/>
+              <path d="M2 12a4 4 0 0 0 4 4c2.5 0 5-4 5-4s-2.5-4-5-4a4 4 0 0 0-4 4z"/>
+              <path d="M22 12a4 4 0 0 0-4-4c-2.5 0-5 4-5 4s2.5 4 5 4a4 4 0 0 0 4 4z"/>
+            </svg>
+          </span>
+          <span class="orn-gem"></span>
+        </div>
+        <span class="orn-line"></span>
+      </div>
+    </section>
+
+    <!-- ====== CLOSING / THANK YOU ====== -->
+    <section class="closing" aria-labelledby="closing-heading">
+
+      <!-- Monogram -->
+      <div class="reveal" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+          style="width:72px;height:72px;margin-bottom:14px;">
+          <defs>
+            <linearGradient id="closingGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#F5EDD8" />
+              <stop offset="50%" stop-color="#D4B882" />
+              <stop offset="100%" stop-color="#8A7245" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="44" stroke="url(#closingGold)" stroke-width="1.4" stroke-dasharray="3 3"
+            opacity="0.85" />
+          <text x="50" y="64" text-anchor="middle" font-family="'Mrs Saint Delafield', cursive" font-size="58"
+            fill="url(#closingGold)">BM</text>
+        </svg>
+      </div>
+
+      <div class="reveal" style="transition-delay: 0.10s;">
+        <p class="eyebrow light">With Love &amp; Gratitude</p>
+        <div class="divider light" aria-hidden="true">
+          <span class="line"></span><span class="gem"></span><span class="line"></span>
+        </div>
+        <h2 id="closing-heading" class="names">Benson &amp; Meera</h2>
+        <div class="date-label">January 3, 2027</div>
+      </div>
+
+      <div class="reveal" style="transition-delay: 0.20s;">
+        <p class="closing-msg">
+          With hearts full of joy and thanksgiving,<br>
+          we look forward to celebrating with you.<br>
+          <em style="font-size:0.9em;opacity:0.8;">Your presence is our greatest gift.</em>
+        </p>
+        <div class="hashtag">#BensonAndMeera</div>
+      </div>
+
+      <div class="foot reveal" style="transition-delay: 0.30s;">
+        Benson &amp; Meera &middot; January 3, 2027 &middot; Made with Love
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
