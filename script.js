@@ -10,7 +10,7 @@ function openInvite() {
   cover.classList.add('open');
   mainEl.classList.add('show');
   document.documentElement.classList.remove('locked');
-  startMusic();
+  // startMusic();
   setTimeout(() => { cover.classList.add('hidden'); }, 1350);
 }
 
@@ -41,8 +41,9 @@ tickCountdown();
 setInterval(tickCountdown, 1000);
 
 /* ==========================================================
-   BACKGROUND MUSIC
+   BACKGROUND MUSIC (Commented out)
 ========================================================== */
+/*
 const audio = document.getElementById('bg-music');
 const muteBtn = document.getElementById('mute-btn');
 const iconSound = document.getElementById('icon-sound');
@@ -50,34 +51,39 @@ const iconMuted = document.getElementById('icon-muted');
 let started = false;
 
 function startMusic() {
-  if (!started) {
+  if (!started && audio) {
     audio.volume = 0.40;
     audio.play().then(() => { started = true; }).catch(() => { });
   }
 }
 
 window.addEventListener('load', () => {
-  audio.volume = 0.40;
-  audio.play().then(() => { started = true; }).catch(() => { });
+  if (audio) {
+    audio.volume = 0.40;
+    audio.play().then(() => { started = true; }).catch(() => { });
+  }
 });
 
 ['click', 'scroll', 'touchstart', 'keydown'].forEach(evt => {
   document.addEventListener(evt, startMusic, { once: true, passive: true });
 });
 
-muteBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  startMusic();
-  if (audio.paused) {
-    audio.play();
-    iconSound.style.display = '';
-    iconMuted.style.display = 'none';
-  } else {
-    audio.pause();
-    iconSound.style.display = 'none';
-    iconMuted.style.display = '';
-  }
-});
+if (muteBtn) {
+  muteBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    startMusic();
+    if (audio.paused) {
+      audio.play();
+      iconSound.style.display = '';
+      iconMuted.style.display = 'none';
+    } else {
+      audio.pause();
+      iconSound.style.display = 'none';
+      iconMuted.style.display = '';
+    }
+  });
+}
+*/
 
 /* ==========================================================
    SCROLL REVEAL — IntersectionObserver

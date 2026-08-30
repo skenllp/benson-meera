@@ -287,17 +287,29 @@ h3 {
 }
 
 .seal {
-  width: 104px;
-  height: 104px;
+  width: 108px;
+  height: 108px;
   border-radius: 50%;
-  background: radial-gradient(circle at 38% 32%, rgba(255, 255, 255, 0.65), transparent 60%),
-    linear-gradient(135deg, #F5EDD8, #E0C88A);
-  border: 2px solid var(--gold);
+  background: radial-gradient(circle at 38% 30%, #FFFFFF 0%, #FAF6EE 30%, #F0E2C6 70%, #DECA9B 100%);
+  border: 2.5px solid var(--gold);
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 28px -4px rgba(30, 21, 10, 0.35);
   animation: pulseRing 2.8s ease-in-out infinite;
+}
+
+.seal-ring {
+  color: var(--gold-deep);
+  opacity: 0.85;
+}
+
+.seal-monogram {
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 64px;
+  font-weight: 500;
+  fill: var(--wine-deep);
+  letter-spacing: 1px;
 }
 
 @keyframes pulseRing {
@@ -1651,8 +1663,9 @@ section {
 }
 
 /* ============================================================
-   MUSIC BUTTON
+   MUSIC BUTTON (Commented out)
 ============================================================ */
+/*
 #mute-btn {
   position: fixed;
   bottom: 26px;
@@ -1705,6 +1718,7 @@ section {
     opacity: 0;
   }
 }
+*/
 
 /* ============================================================
    RESPONSIVE
