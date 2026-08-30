@@ -62,6 +62,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 html.locked,
@@ -78,6 +79,8 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 img {
@@ -120,7 +123,8 @@ h3 {
   justify-content: center;
   gap: 14px;
   margin: 20px auto;
-  width: 240px;
+  max-width: 240px;
+  width: 100%;
 }
 
 .divider .line {
@@ -1735,7 +1739,7 @@ section {
 */
 
 /* ============================================================
-   RESPONSIVE
+   RESPONSIVE DESIGN & MOBILE OPTIMIZATIONS
 ============================================================ */
 
 /* --- Tablet / large mobile (≤ 768px) --- */
@@ -1745,6 +1749,11 @@ section {
   }
 
   /* Hero */
+  .hero {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+
   .hero-portrait-wrapper {
     width: 210px;
     height: 280px;
@@ -1775,6 +1784,7 @@ section {
   /* Couple */
   .couple-grid {
     gap: 20px;
+    width: 100%;
   }
 
   .couple-and-separator {
@@ -1782,8 +1792,9 @@ section {
   }
 
   .couple-card {
-    min-width: 100%;
+    min-width: 0;
     max-width: 100%;
+    width: 100%;
   }
 
   /* Gallery */
@@ -1801,22 +1812,27 @@ section {
   /* Events */
   .event-cards {
     gap: 20px;
+    width: 100%;
   }
 
   .event-card {
+    min-width: 0;
     width: 100%;
-    max-width: 420px;
+    max-width: 440px;
     margin: 0 auto;
   }
 
   /* Venue */
   .venue-cards {
     gap: 20px;
+    width: 100%;
   }
 
   .venue-card {
-    min-width: 100%;
-    max-width: 100%;
+    min-width: 0;
+    max-width: 440px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   /* Countdown */
@@ -1829,6 +1845,7 @@ section {
   /* Timeline */
   .timeline-list {
     max-width: 100%;
+    margin-top: 40px;
   }
 
   .timeline-list::before {
@@ -1840,16 +1857,23 @@ section {
   .tl-item:nth-child(odd),
   .tl-item:nth-child(even) {
     flex-direction: row;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 36px;
   }
 
-  .tl-item:nth-child(odd) .tl-content {
+  .tl-item:nth-child(odd) .tl-content,
+  .tl-item:nth-child(even) .tl-content {
     text-align: left;
+    width: calc(100% - 60px);
   }
 
   .tl-dot {
     width: 44px;
     height: 44px;
     font-size: 18px;
+    margin-top: 2px;
+    flex-shrink: 0;
   }
 
   .tl-content {
@@ -1861,6 +1885,15 @@ section {
   }
 
   /* Cover */
+  .seal {
+    width: 96px;
+    height: 96px;
+  }
+
+  .seal-monogram {
+    font-size: 58px;
+  }
+
   .cover-name .n {
     font-size: 34px;
   }
@@ -1881,10 +1914,15 @@ section {
 /* --- Mobile phones (≤ 480px) --- */
 @media (max-width: 480px) {
   section {
-    padding: 60px 5vw;
+    padding: 56px 5vw;
   }
 
   /* Hero */
+  .hero {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
   .hero-portrait-wrapper {
     width: 185px;
     height: 250px;
@@ -1941,11 +1979,25 @@ section {
     margin-top: 18px;
   }
 
+  /* Welcome */
+  .welcome-body {
+    font-size: 17.5px;
+    line-height: 1.75;
+  }
+
   /* Gallery */
+  .gallery-section {
+    padding: 60px 5vw;
+  }
+
+  .gallery-grid {
+    margin-top: 36px;
+  }
+
   .gallery-item.col-6,
   .gallery-item.col-4,
   .gallery-item.col-12 {
-    height: 310px;
+    height: 300px;
   }
 
   .gallery-caption .title {
@@ -1954,22 +2006,46 @@ section {
 
   /* Cards */
   .couple-card {
-    min-width: 100%;
-    padding: 34px 22px;
+    padding: 34px 20px;
+  }
+
+  .couple-card .person-name {
+    font-size: 30px;
+  }
+
+  .couple-card .person-surname {
+    font-size: 14px;
+  }
+
+  .couple-card .person-parents {
+    font-size: 15px;
   }
 
   .event-card {
-    padding: 32px 24px;
+    padding: 32px 20px;
+  }
+
+  .event-card h3 {
+    font-size: 26px;
   }
 
   .venue-card {
-    padding: 34px 22px 28px;
+    padding: 34px 20px 28px;
+  }
+
+  .venue-title {
+    font-size: 26px;
   }
 
   .event-btn,
   .venue-btn {
-    padding: 12px 20px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 13px 18px;
     font-size: 10.5px;
+    text-align: center;
   }
 
   /* Countdown */
@@ -1979,18 +2055,51 @@ section {
   }
 
   .cbox {
-    padding: 22px 8px;
+    padding: 20px 8px;
   }
 
-  /* Typography scale down */
+  .cnum {
+    font-size: 34px;
+  }
+
+  /* Quote */
+  .quote-section {
+    padding: 64px 5vw;
+  }
+
+  .quote-text {
+    font-size: clamp(22px, 5.5vw, 28px);
+    line-height: 1.55;
+  }
+
+  .quote-mark {
+    font-size: 72px;
+  }
+
+  /* Floral ornament */
+  .floral-separator {
+    padding: 40px 5vw;
+  }
+
   .floral-text {
     font-size: 36px;
+  }
+
+  /* Closing */
+  .closing {
+    padding: 64px 5vw 90px;
   }
 
   .closing .names {
     font-size: clamp(42px, 12vw, 68px);
   }
 
+  .closing .closing-msg {
+    font-size: 17.5px;
+    line-height: 1.7;
+  }
+
+  /* Typography scale down */
   .couple-section h2,
   .gallery-section h2,
   .events h2,
@@ -2003,7 +2112,7 @@ section {
 /* --- Small phones (≤ 380px) --- */
 @media (max-width: 380px) {
   section {
-    padding: 52px 4.5vw;
+    padding: 48px 4vw;
   }
 
   .hero-portrait-wrapper {
@@ -2012,7 +2121,7 @@ section {
   }
 
   .hero-names {
-    font-size: clamp(38px, 13.5vw, 56px);
+    font-size: clamp(36px, 13.5vw, 52px);
   }
 
   .hero-tagline {
@@ -2026,7 +2135,7 @@ section {
 
   .countdown-grid {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 260px;
+    max-width: 250px;
     gap: 10px;
   }
 
@@ -2035,49 +2144,76 @@ section {
   }
 
   .cbox {
-    padding: 18px 6px;
+    padding: 16px 6px;
   }
 
   .gallery-item.col-6,
   .gallery-item.col-4,
   .gallery-item.col-12 {
-    height: 270px;
+    height: 260px;
   }
 
   .event-card {
-    padding: 28px 18px;
+    padding: 26px 16px;
   }
 
   .event-card h3 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .venue-card {
-    padding: 28px 18px;
+    padding: 26px 16px;
+  }
+
+  .venue-title {
+    font-size: 22px;
+  }
+
+  .venue-map-placeholder {
+    padding: 16px 10px;
+    min-height: 130px;
+  }
+
+  .venue-map-text {
+    font-size: 13px;
   }
 
   .cover-name .n {
     font-size: 28px;
   }
 
+  .cover-name .r {
+    font-size: 8.5px;
+  }
+
   .cover-verse {
     font-size: 10.5px;
     max-width: 160px;
   }
+
+  .seal {
+    width: 88px;
+    height: 88px;
+  }
+
+  .seal-monogram {
+    font-size: 52px;
+  }
 }
 
-/* --- Fold / very small (≤ 320px) --- */
+/* --- Ultra-small / Fold screen (≤ 320px) --- */
 @media (max-width: 320px) {
   .hero-names {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .countdown-grid {
-    max-width: 230px;
+    max-width: 220px;
   }
 
   .event-card,
-  .venue-card {
-    padding: 24px 14px;
+  .venue-card,
+  .couple-card {
+    padding: 22px 12px;
   }
 }
