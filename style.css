@@ -770,6 +770,15 @@ section {
   font-weight: 500;
 }
 
+.couple-card .person-location {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 15.5px;
+  margin-top: 5px;
+  letter-spacing: 0.02em;
+}
+
 .couple-and-separator {
   font-family: 'Mrs Saint Delafield', cursive;
   font-size: 64px;
@@ -2068,6 +2077,10 @@ section {
 
   .couple-card .person-parents {
     font-size: 15px;
+  }
+
+  .couple-card .person-location {
+    font-size: 14px;
   }
 
   .event-card {
