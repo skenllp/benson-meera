@@ -770,12 +770,13 @@ section {
   font-weight: 500;
 }
 
-.couple-card .person-location {
+.couple-card .person-location,
+.couple-card .person-place {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   color: var(--ink-soft);
   font-size: 15.5px;
-  margin-top: 5px;
+  margin-top: 18px;
   letter-spacing: 0.02em;
 }
 
@@ -2079,7 +2080,8 @@ section {
     font-size: 15px;
   }
 
-  .couple-card .person-location {
+  .couple-card .person-location,
+  .couple-card .person-place {
     font-size: 14px;
   }
 
